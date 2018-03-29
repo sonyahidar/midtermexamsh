@@ -29,4 +29,9 @@ class PagesController extends Controller
         return view('pages.thankyou');
 
     }
+    function about() {
+        return view('pages.about');
+    }
+
 }
+

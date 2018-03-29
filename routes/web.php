@@ -22,3 +22,4 @@ Route::get('/', 'PagesController@home') -> name('home');
 Route::get('/contact', 'PagesController@contact') -> name('contact');
 Route::get('/thanks', 'PagesController@thanks') -> name('thanks');
 Route::post('/contact', 'PagesController@store') -> name('contact.store');
+Route::get('/about', 'PagesController@about') -> name('about');
