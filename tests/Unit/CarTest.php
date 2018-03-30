@@ -39,12 +39,21 @@ class CarTest extends TestCase
         $this->assertTrue($car1->save());
     }
 
-    public function testDeleteCar()
+  /*  public function testDeleteCar()
     {
 
         $car1 = car::inRandomOrder()->first();
 
 
         $this->assertTrue($car1->delete());
+    }*/
+
+    public function testCountCarSeed()
+    {
+
+        $car = factory(car::class)->create();
+        $carCount = $car->count();
+        //dd($carCount);
+        $this->assertTrue($carCount=50);
     }
 }
