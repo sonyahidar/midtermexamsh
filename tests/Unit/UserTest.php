@@ -27,7 +27,7 @@ class UserTest extends TestCase
 
      }*/
 
-    public function testUpdateUser()
+  /*  public function testUpdateUser()
     {
 
         $user1 = User::inRandomOrder()->first();
@@ -38,6 +38,15 @@ class UserTest extends TestCase
 
         $this->assertTrue($user1->save());
     }
+*/
 
+    public function testDeleteUser()
+    {
+
+        $user1 = User::inRandomOrder()->first();
+
+
+        $this->assertTrue($user1->delete());
+    }
 
 }
