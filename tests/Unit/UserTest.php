@@ -50,7 +50,7 @@ class UserTest extends TestCase
 
         $this->assertTrue($user1->delete());
     }
-
+/*
     public function testCountUserSeed()
     {
 
@@ -58,7 +58,7 @@ class UserTest extends TestCase
         $userCount = $user->count();
         dd($userCount);
         $this->assertTrue($userCount=50);
-    }
+    }*/
 
 
 
