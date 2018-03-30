@@ -9,6 +9,8 @@ use App\User;
 
 class UserTest extends TestCase
 {
+
+    /*use RefreshDatabase;*/
     /**
      * A basic test example.
      *
@@ -27,7 +29,7 @@ class UserTest extends TestCase
 
      }*/
 
-  /*  public function testUpdateUser()
+    public function testUpdateUser()
     {
 
         $user1 = User::inRandomOrder()->first();
@@ -38,7 +40,7 @@ class UserTest extends TestCase
 
         $this->assertTrue($user1->save());
     }
-*/
+
 
     public function testDeleteUser()
     {
@@ -48,5 +50,16 @@ class UserTest extends TestCase
 
         $this->assertTrue($user1->delete());
     }
+
+    public function testCountUserSeed()
+    {
+
+        $user = factory(User::class)->create();
+        $userCount = $user->count();
+        dd($userCount);
+        $this->assertTrue($userCount=50);
+    }
+
+
 
 }
