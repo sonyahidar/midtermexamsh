@@ -14,15 +14,30 @@ class UserTest extends TestCase
      *
      * @return void
      */
-    public function testInsertUser()
+    /* public function testInsertUser()
+     {
+
+         $user = new User();
+
+         $user->name = 'Sonya';
+         $user->email = 'sonya@gmail.com';
+         $user->password ='password342';
+
+         $this->assertTrue($user->save());
+
+     }*/
+
+    public function testUpdateUser()
     {
 
-        $user = new User();
+        $user1 = User::inRandomOrder()->first();
 
-        $user->name = 'Sonya';
-        $user->email = 'sonya@gmail.com';
-        $user->password ='password342';
 
-        $this->assertTrue($user->save());
+        $user1->name = 'Steve Smith';
+
+
+        $this->assertTrue($user1->save());
     }
+
+
 }
