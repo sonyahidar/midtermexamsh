@@ -56,14 +56,25 @@ class CarTest extends TestCase
         //dd($carCount);
         $this->assertTrue($carCount=50);
     }*/
-
+/*
     public function testCarYearType()
     {
 
         $car = car::inRandomOrder()->first();
 
         $this->assertInternalType('integer', $car->year);
-    }
+    }*/
+    public function testCarMake()
+    {
 
+        $car = car::inRandomOrder()->first();
+        $makearr = array("honda", "toyota", "ford");
+        if (in_array($car->make, $makearr)) {
+            $this->assertTrue(true);
+        }else{
+            $this->assertFalse(true);
+        }
+
+    }
 
 }
